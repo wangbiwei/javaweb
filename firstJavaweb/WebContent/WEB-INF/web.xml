@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 文档声明 -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" metadata-complete="true" version="3.1">
+  <context-param>
+    <param-name>Name1</param-name>
+    <param-value>Imwang</param-value>
+  </context-param>
+  
+  <servlet>
+  	<servlet-name>HttpServletStudy1</servlet-name>
+  	<servlet-class>wang.w2017年3月19日.Servlet.HttpServletStudy1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>HttpServletStudy1</servlet-name>
+  	<url-pattern>/HttpServletStudy1</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>FirstServlet</servlet-name>
+    <servlet-class>wang.w2017年3月19日.Servlet.FirstServlet</servlet-class>
+    <init-param>
+      <param-name>name</param-name>
+      <param-value>wangBiWei</param-value>
+    </init-param>
+    <init-param>
+      <param-name>age</param-name>
+      <param-value>24</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FirstServlet</servlet-name>
+    <url-pattern>/firstServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>httpServlet</servlet-name>
+    <servlet-class>wang.w2017年3月19日.Servlet.HttpServletStudy</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>httpServlet</servlet-name>
+    <url-pattern>/httpServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
