@@ -14,6 +14,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletResponse;
 
 /**@author 王必伟
  *
@@ -97,6 +98,10 @@ public class FirstServlet implements Servlet
 		ServletContext servletContext = this.getServletConfig().getServletContext();
 		servletContext.setAttribute("name", "zhangsan");
 		System.out.println(getServletConfig().getServletContext().getInitParameter("count"));
+		
+		((HttpServletResponse)servletResponse).setStatus(HttpServletResponse.SC_MOVED_TEMPORARILY);
+		// 请求URL = /项目名 + Servlet路径
+		((HttpServletResponse) servletResponse).setHeader("Location", "/firstJavaweb/responseStatus");
 	}
 	
 }

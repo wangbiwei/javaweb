@@ -1,8 +1,11 @@
 package wang.w2017年3月19日.Servlet;
 
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -33,5 +36,19 @@ public class HttpServletStudy1 extends HttpServlet {
 		ClassLoader classLoader = getClass().getClassLoader();
 		InputStream resourceAsStream = classLoader.getResourceAsStream("wang/w2017年3月19日/Servlet/test.txt");
 		System.out.println(resourceAsStream);
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(req.getInputStream()));
+		String temp = null;
+		resp.setCharacterEncoding("utf-8");
+		resp.setContentType("text/html");
+		PrintWriter writer = resp.getWriter();
+		
+		while ((temp = bufferedReader.readLine()) != null)
+		{
+			writer.println("wwww");
+			System.out.println(temp);
+		}
+		writer.println("wwww");
+		writer.flush();
+		writer.close();
 	}
 }

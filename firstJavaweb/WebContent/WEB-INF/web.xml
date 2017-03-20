@@ -5,16 +5,14 @@
     <param-name>Name1</param-name>
     <param-value>Imwang</param-value>
   </context-param>
-  
   <servlet>
-  	<servlet-name>HttpServletStudy1</servlet-name>
-  	<servlet-class>wang.w2017年3月19日.Servlet.HttpServletStudy1</servlet-class>
+    <servlet-name>HttpServletStudy1</servlet-name>
+    <servlet-class>wang.w2017年3月19日.Servlet.HttpServletStudy1</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>HttpServletStudy1</servlet-name>
-  	<url-pattern>/HttpServletStudy1</url-pattern>
+    <servlet-name>HttpServletStudy1</servlet-name>
+    <url-pattern>/HttpServletStudy1</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>FirstServlet</servlet-name>
     <servlet-class>wang.w2017年3月19日.Servlet.FirstServlet</servlet-class>
@@ -32,7 +30,6 @@
     <servlet-name>FirstServlet</servlet-name>
     <url-pattern>/firstServlet</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>httpServlet</servlet-name>
     <servlet-class>wang.w2017年3月19日.Servlet.HttpServletStudy</servlet-class>
@@ -40,5 +37,25 @@
   <servlet-mapping>
     <servlet-name>httpServlet</servlet-name>
     <url-pattern>/httpServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>response</servlet-name>
+  	<servlet-class>wang.w2017年3月20日.requestANDresponse.重定向</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>response</servlet-name>
+  	<url-pattern>/responseStatus</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>request</servlet-name>
+  	<servlet-class>wang.w2017年3月20日.requestANDresponse.获取请求参数</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>request</servlet-name>
+  	<url-pattern>/request</url-pattern>
   </servlet-mapping>
 </web-app>
