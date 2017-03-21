@@ -51,11 +51,21 @@
   
   <servlet>
   	<servlet-name>request</servlet-name>
-  	<servlet-class>wang.w2017年3月20日.requestANDresponse.获取请求参数</servlet-class>
+  	<servlet-class>wang.w2017年3月20日.requestANDresponse.请求转发</servlet-class>
   </servlet>
   
   <servlet-mapping>
   	<servlet-name>request</servlet-name>
   	<url-pattern>/request</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>bianma</servlet-name>
+  	<servlet-class>wang.w2017年3月20日.requestANDresponse.编码</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>bianma</servlet-name>
+  	<url-pattern>/bianma</url-pattern>
   </servlet-mapping>
 </web-app>

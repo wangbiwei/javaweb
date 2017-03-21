@@ -2,6 +2,8 @@
 <html>
 	<head><title>helloHtml</title></head>
 	<body style="background-color:green">
+		<%=request.getAttribute("name") %>
+		<br />
 		${header['User-Agent']}
 		<br />
 		
