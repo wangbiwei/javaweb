@@ -68,4 +68,14 @@
   	<servlet-name>bianma</servlet-name>
   	<url-pattern>/bianma</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>xiangjia</servlet-name>
+  	<servlet-class>wang.w2017年3月22日.Session.相加Servlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>xiangjia</servlet-name>
+  	<url-pattern>/xiangjia</url-pattern>
+  </servlet-mapping>
 </web-app>
