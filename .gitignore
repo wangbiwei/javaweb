@@ -1,4 +1,6 @@
 *Test.java
 
 *.class
+*.json
+*.json.bak
 /build/
