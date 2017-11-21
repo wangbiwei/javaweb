@@ -5,6 +5,7 @@
     <param-name>Name1</param-name>
     <param-value>Imwang</param-value>
   </context-param>
+  
   <servlet>
     <servlet-name>HttpServletStudy1</servlet-name>
     <servlet-class>wang.w2017年3月19日.Servlet.HttpServletStudy1</servlet-class>
@@ -24,7 +25,7 @@
       <param-name>age</param-name>
       <param-value>24</param-value>
     </init-param>
-    <load-on-startup>1</load-on-startup>
+    <!-- <load-on-startup>1</load-on-startup> -->
   </servlet>
   <servlet-mapping>
     <servlet-name>FirstServlet</servlet-name>

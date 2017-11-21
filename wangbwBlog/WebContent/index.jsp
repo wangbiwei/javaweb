@@ -53,5 +53,13 @@ window.onscroll = function () {//将它单独放到就是文件中不行
 <div id="显示内容">
 
 </div>
+<%
+	response.addIntHeader("name",1);
+	out.write(request.getMethod() + "\r\n");
+	out.write(request.getHeader("User-Agent") + "\r\n");
+	out.write(request.getCookies() + "\r\n");
+	out.write(request.getSession() + "\r\n");
+	out.write(request.getMethod() + "\r\n");
+%>
 </body>
 </html>

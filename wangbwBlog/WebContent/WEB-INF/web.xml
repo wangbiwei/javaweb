@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 文档声明 -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
+		metadata-complete="true" version="3.1">
+
+	<!-- 不能用url-parten的值 -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list> 
+	
+	<context-param>
+		<param-name>viewPeoples</param-name>
+		<param-value>0</param-value>
+	</context-param>	
+	<listener>
+		<listener-class>javaweb.wang.listener.统计在线人数</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>javaweb.wang.model.Dog</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>javaweb.wang.listener.MyServletContextListener</listener-class>
+	</listener>
+	
+	<context-param>
+		<param-name>name</param-name>
+		<param-value>wang的dog</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>age</param-name>
+		<param-value>1</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>breed</param-name>
+		<param-value>other</param-value>
+	</context-param>
+	
+	<servlet>
+		<servlet-name>Ch3 Beer</servlet-name>
+		<servlet-class>javaweb.wang.controller.BeerSelect</servlet-class>
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>"wangbiwei</param-value>
+		</init-param>
+		<init-param>
+			<param-name>age</param-name>
+			<param-value>24</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Ch3 Beer</servlet-name>
+		<url-pattern>/SelectBeer.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>testListener</servlet-name>
+		<servlet-class>javaweb.wang.controller.TestListener</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>testListener</servlet-name>
+		<url-pattern>/testListener</url-pattern>
+	</servlet-mapping>
+</web-app>
